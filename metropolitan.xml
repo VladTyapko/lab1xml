@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metropolitan>
+    <line line_id="0" color="blue">
+        <station station_id="301" name="Teremky"/>
+        <station station_id="302" name="Ipodrom"/>
+        <station station_id="303" name="Vystavkovyi Tsentr"/>
+    </line>
+    <line line_id="1" color="red">
+        <station station_id="101" name="Akademmistechko"/>
+        <station station_id="102" name="Zhytomyrska"/>
+        <station station_id="103" name="Sviatoshyn"/>
+    </line>
+    <line line_id="2" color="green">
+        <station station_id="201" name="Syrets"/>
+        <station station_id="202" name="Dorohozhychi"/>
+        <station station_id="203" name="Lukianivska"/>
+    </line>
+</metropolitan>

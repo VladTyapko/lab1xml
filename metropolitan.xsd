@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="metropolitan" type="metropolitanType"/>
+  <xs:complexType name="station">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute  name="station_id" use="required" >
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:maxInclusive value="999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute type="xs:string" name="name" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="line">
+    <xs:sequence>
+      <xs:element type="station" name="station" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="line_id" use="required"/>
+    <xs:attribute type="xs:string" name="color" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="metropolitanType">
+    <xs:sequence>
+      <xs:element type="line" name="line" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
